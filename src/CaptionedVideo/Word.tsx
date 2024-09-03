@@ -12,15 +12,16 @@ export const Word: React.FC<{
 	stroke: boolean;
 }> = ({enterProgress, text, stroke}) => {
 	const {width} = useVideoConfig();
-	const desiredFontSize = 120;
+	const desiredFontSize = 100;
 
 	const fittedText = fitText({
 		fontFamily,
 		text,
-		withinWidth: width * 0.8,
+		withinWidth: width * 0.5,
 	});
 
-	const fontSize = Math.min(desiredFontSize, fittedText.fontSize);
+	// const fontSize = Math.min(desiredFontSize, fittedText.fontSize);
+	const fontSize = 80
 
 	return (
 		<AbsoluteFill
@@ -28,18 +29,21 @@ export const Word: React.FC<{
 				justifyContent: 'center',
 				alignItems: 'center',
 				top: undefined,
-				bottom: 350,
+				bottom: 300,
 				height: 150,
 			}}
 		>
 			<div
 				style={{
 					fontSize,
+					textAlign: 'center',
+					width: '95%',
 					color: 'white',
-					WebkitTextStroke: stroke ? '20px black' : undefined,
+					letterSpacing: 10,
+					WebkitTextStroke: stroke ? '10px black' : undefined,
 					transform: makeTransform([
-						scale(interpolate(enterProgress, [0, 1], [0.8, 1])),
-						translateY(interpolate(enterProgress, [0, 1], [50, 0])),
+						scale(interpolate(enterProgress, [0, 1], [0.5, 1])),
+						translateY(interpolate(enterProgress, [0, 1], [10, 0])),
 					]),
 					fontFamily,
 					textTransform: 'uppercase',

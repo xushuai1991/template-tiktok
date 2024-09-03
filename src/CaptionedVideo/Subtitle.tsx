@@ -10,7 +10,7 @@ const Subtitle: React.FC<{text: string}> = ({text}) => {
 		frame,
 		fps,
 		config: {
-			damping: 200,
+			damping: 20,
 		},
 		durationInFrames: 5,
 	});

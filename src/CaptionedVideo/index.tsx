@@ -15,7 +15,6 @@ import {z} from 'zod';
 import Subtitle from './Subtitle';
 import {getVideoMetadata} from '@remotion/media-utils';
 import {loadFont} from '../load-font';
-import {NoCaptionFile} from './NoCaptionFile';
 
 export type SubtitleProp = {
 	startInSeconds: number;
@@ -64,6 +63,8 @@ export const CaptionedVideo: React.FC<{
 			await loadFont();
 			const res = await fetch(subtitlesFile);
 			const data = await res.json();
+			// console.error(111, data)
+			// alert(JSON.stringify(data))
 			setSubtitles(data.transcription);
 			continueRender(handle);
 		} catch (e) {
@@ -95,15 +96,29 @@ export const CaptionedVideo: React.FC<{
 			</AbsoluteFill>
 			{subtitles.map((subtitle, index) => {
 				const nextSubtitle = subtitles[index + 1] ?? null;
-				const subtitleStartFrame = subtitle.startInSeconds * fps;
+				// const subtitleStartFrame = subtitle.startInSeconds * fps;
+				// const subtitleEndFrame = Math.min(
+				// 	nextSubtitle ? nextSubtitle.startInSeconds * fps : Infinity,
+				// 	// subtitleStartFrame + fps,
+				// );
+				
+				const subtitleStartFrame = subtitle.offsets.from/1000 * fps;
 				const subtitleEndFrame = Math.min(
-					nextSubtitle ? nextSubtitle.startInSeconds * fps : Infinity,
-					subtitleStartFrame + fps,
+					nextSubtitle ? nextSubtitle.offsets.from/1000 * fps : Infinity,
+					// subtitleStartFrame + fps,
 				);
 				const durationInFrames = subtitleEndFrame - subtitleStartFrame;
+				// if (index == 0) {
+				// 	alert(subtitleEndFrame)
+				// 	// alert(subtitleStartFrame)
+
+				// 	// alert(JSON.stringify(subtitle))
+				// }
+				
 				if (durationInFrames <= 0) {
 					return null;
 				}
+				console.log(durationInFrames)
 
 				return (
 					<Sequence
@@ -114,7 +129,6 @@ export const CaptionedVideo: React.FC<{
 					</Sequence>
 				);
 			})}
-			{getFileExists(subtitlesFile) ? null : <NoCaptionFile />}
 		</AbsoluteFill>
 	);
 };

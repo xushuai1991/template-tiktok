@@ -1,0 +1,176 @@
+{
+    "systeminfo": "AVX = 0 | AVX2 = 0 | AVX512 = 0 | FMA = 0 | NEON = 1 | ARM_FMA = 1 | METAL = 1 | F16C = 0 | FP16_VA = 1 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 0 | SSSE3 = 0 | VSX = 0 | CUDA = 0 | COREML = 0 | OPENVINO = 0",
+    "model": {
+        "type": "large",
+        "multilingual": true,
+        "vocab": 51865,
+        "audio": {
+            "ctx": 1500,
+            "state": 1280,
+            "head": 20,
+            "layer": 32
+        },
+        "text": {
+            "ctx": 448,
+            "state": 1280,
+            "head": 20,
+            "layer": 32
+        },
+        "mels": 80,
+        "ftype": 1
+    },
+    "params": {
+        "model": ".\/whisper.cpp\/ggml-large-v2.bin",
+        "language": "zh",
+        "translate": false
+    },
+    "result": {
+        "language": "zh"
+    },
+    "transcription": [
+        {
+            "timestamps": {
+                "from": "00:00:00,000",
+                "to": "00:00:03,400"
+            },
+            "offsets": {
+                "from": 0,
+                "to": 3400
+            },
+            "text": "全球的目光都关注在这款国产游戏《黑神话悟空》上",
+            "startInSeconds": 0
+        },
+        {
+            "timestamps": {
+                "from": "00:00:03,400",
+                "to": "00:00:04,800"
+            },
+            "offsets": {
+                "from": 3400,
+                "to": 4800
+            },
+            "text": "准备好直面天命吧",
+            "startInSeconds": 3.4
+        },
+        {
+            "timestamps": {
+                "from": "00:00:04,800",
+                "to": "00:00:06,000"
+            },
+            "offsets": {
+                "from": 4800,
+                "to": 6000
+            },
+            "text": "还有咱们的国产车",
+            "startInSeconds": 4.8
+        },
+        {
+            "timestamps": {
+                "from": "00:00:06,000",
+                "to": "00:00:09,200"
+            },
+            "offsets": {
+                "from": 6000,
+                "to": 9200
+            },
+            "text": "你看上汽大通很多款车型在海外都很受欢迎",
+            "startInSeconds": 6
+        },
+        {
+            "timestamps": {
+                "from": "00:00:09,200",
+                "to": "00:00:12,800"
+            },
+            "offsets": {
+                "from": 9200,
+                "to": 12800
+            },
+            "text": "你就说这台上汽大通大家久操混 越级的车身尺寸",
+            "startInSeconds": 9.2
+        },
+        {
+            "timestamps": {
+                "from": "00:00:12,800",
+                "to": "00:00:16,000"
+            },
+            "offsets": {
+                "from": 12800,
+                "to": 16000
+            },
+            "text": "纯电续航225公里 综合续航1200加公里",
+            "startInSeconds": 12.8
+        },
+        {
+            "timestamps": {
+                "from": "00:00:16,000",
+                "to": "00:00:18,000"
+            },
+            "offsets": {
+                "from": 16000,
+                "to": 18000
+            },
+            "text": "一周充一次电 一年加一次油",
+            "startInSeconds": 16
+        },
+        {
+            "timestamps": {
+                "from": "00:00:18,000",
+                "to": "00:00:20,000"
+            },
+            "offsets": {
+                "from": 18000,
+                "to": 20000
+            },
+            "text": "长途旅行续航也不用担心",
+            "startInSeconds": 18
+        },
+        {
+            "timestamps": {
+                "from": "00:00:20,000",
+                "to": "00:00:23,000"
+            },
+            "offsets": {
+                "from": 20000,
+                "to": 23000
+            },
+            "text": "并且大家久全系还标配了凌鸦头等舱座椅",
+            "startInSeconds": 20
+        },
+        {
+            "timestamps": {
+                "from": "00:00:23,000",
+                "to": "00:00:24,200"
+            },
+            "offsets": {
+                "from": 23000,
+                "to": 24200
+            },
+            "text": "坐下躺着都舒适",
+            "startInSeconds": 23
+        },
+        {
+            "timestamps": {
+                "from": "00:00:24,200",
+                "to": "00:00:27,200"
+            },
+            "offsets": {
+                "from": 24200,
+                "to": 27200
+            },
+            "text": "另外它的全转运输三连屏 观感也很棒",
+            "startInSeconds": 24.2
+        },
+        {
+            "timestamps": {
+                "from": "00:00:27,200",
+                "to": "00:00:31,200"
+            },
+            "offsets": {
+                "from": 27200,
+                "to": 31200
+            },
+            "text": "让我们一起期待上汽大风大家酒操混的惊艳表现吧",
+            "startInSeconds": 27.2
+        }
+    ]
+}
